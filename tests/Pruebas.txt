@@ -1,0 +1,72 @@
+;C
+
+
+;Comentario 
+
+
+;Comentario de varias palabras
+
+
+#| Comentario 
+	de 
+	varias
+	lineas |#
+
+
+(define x 5)
+
+
+(define x 'asdfasdf')
+
+
+(define x "asdfdasdf")
+
+
+;condicional cond
+(define (thirdi list a)
+	(cond
+		[(= a 1) (car list)]
+		[else (let ((x (- a 1)))
+			(cond
+				[(empty? (cdr list)) '()]
+				[else (thirdi (cdr list) x)]))]))
+
+
+;condicional if
+(if (< i 4) 
+	(display i) 
+	(display test))
+
+;loop 
+(define (sum/display lst)
+	(do ((remaining lst (cdr remaining))
+				(final-sum 0 (+ final-sum (car remaining))))
+			((null? remaining) final-sum)
+		(display (car remaining))
+		(newline)))
+
+
+;proper loop
+(define plustwo
+	(lambda (lis)
+		(cond ((null? lis) nil)
+			(else (cons (+ (car lis) 2)
+				(plustwo (cdr lis)))))))
+
+
+; I/O test
+(define (prompt/read prompt)
+	(display prompt)
+	(read-line))
+
+
+;programa con (casi) todo junto
+(do (i 0) (+ i 1) 
+	(> 8 i) 
+	(if (< i 4) 
+		(display i) 
+		(display 'test')))
+
+
+
+

@@ -1,0 +1,47 @@
+; prueba de condicional correcto
+(define (x y)
+	(cond
+		[(= a 1) #t]
+		[else 20]))
+
+
+; prueba de condicional if correcto
+(if (< i 4) 
+	(display i))
+
+
+; prueba if-else correcto
+(if (< i 4) 
+		(display i) 
+		(display test))
+
+
+; prueba de ciclo correcto
+(do (i 0) (+ i 1) 
+	(> 8 i) 
+	(if (< i 4) 
+		(display i) 
+		(display test)))
+
+
+;; prueba de ciclo incorrecto
+(do (x 5)
+    (= i 5)
+    (display i))
+
+
+; prueba de condicional INcorrecto
+(define (x y)
+	(cond
+		[else 20]
+		[(= a 1) #t]
+		[else 20]))
+
+
+; prueba que utiliza una cadena una variable y una constante en un lugar que no debe
+(define p 3)
+(do (0 i) (+ i 1) 
+	(> 8 i) 
+	(if (< i 4) 
+		('asdf ' display) 
+		(p test)))

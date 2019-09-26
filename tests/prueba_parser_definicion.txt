@@ -1,0 +1,14 @@
+;prueba de definicion de forma A
+(define x 10)
+
+
+; prueba de definicion de forma B
+(define x 10)(define y 20)
+
+
+; prueba de definicion en lugar incorrecto
+(x 10 define)
+
+
+; prueba de definicion en orden incorrecto
+(define 10 x)
